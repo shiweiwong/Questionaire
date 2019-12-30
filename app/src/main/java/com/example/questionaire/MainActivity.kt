@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             AlertDialog.Builder(this).setTitle("得分结果").setMessage("${score}分").setPositiveButton("确定",{ dialogInterface: DialogInterface, i: Int -> }).show();
-            Toast.makeText(this,"$score", Toast.LENGTH_SHORT).show()
             Log.i("data", json.toString())
             val apis = retrofit.create(APIs::class.java)
             val message = HashMap<String, Map<String, String>>()
